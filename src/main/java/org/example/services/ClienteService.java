@@ -4,10 +4,12 @@ import org.example.entities.Cliente;
 import org.example.repositories.ClienteRepository;
 import org.example.services.exeptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ClienteService {
     @Autowired
     private ClienteRepository repository;

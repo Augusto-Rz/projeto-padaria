@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 @RestController
-@RequestMapping(value = "/cliente")
+@RequestMapping(value = "/fpagamentos")
 public class FormaDePagamentoResource {
     @Autowired
     public FormaDePagamentoService service;

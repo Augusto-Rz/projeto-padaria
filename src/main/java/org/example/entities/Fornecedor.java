@@ -11,10 +11,10 @@ public class Fornecedor implements Serializable {
     @Column(name="ID")
     private Long id;
 
-    @Column(name="RAZAO SOCIAL")
+    @Column(name="RAZAO_SOCIAL")
     private String razaoSocial;
 
-    @Column(name="NOME FANTASIA")
+    @Column(name="NOME_FANTASIA")
     private String nomefantasia;
 
     @Column(name="CNPJ")

@@ -3,6 +3,7 @@ package org.example.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
 public class Produto implements Serializable {
 
     @Id
