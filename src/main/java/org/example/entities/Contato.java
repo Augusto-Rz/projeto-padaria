@@ -1,5 +1,7 @@
 package org.example.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -10,6 +12,11 @@ public class Contato implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "CON_FOR_ID")
+    private Fornecedor conFornecedor;
     @Column(length = 55, name = "telefone", nullable = false)
     private String telefone;
     @Column(length = 100, name = "celular", nullable = false)

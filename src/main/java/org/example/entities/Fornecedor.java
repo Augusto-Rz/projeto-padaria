@@ -2,6 +2,8 @@ package org.example.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Fornecedor implements Serializable {
@@ -10,6 +12,9 @@ public class Fornecedor implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     private Long id;
+
+    @OneToMany(mappedBy = "conFornecedor", cascade = CascadeType.ALL)
+    private List<Contato> contatos = new ArrayList<>();
 
     @Column(name="RAZAO_SOCIAL")
     private String razaoSocial;
@@ -72,5 +77,13 @@ public class Fornecedor implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public List<Contato> getContatos() {
+        return contatos;
+    }
+
+    public void setContatos(List<Contato> contatos) {
+        this.contatos = contatos;
     }
 }
